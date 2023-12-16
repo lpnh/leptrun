@@ -1,0 +1,25 @@
+[tasks.clean-css]
+command = "rm"
+args = ["-f", "style/output.css"]
+
+[tasks.clean-dist]
+command = "trunk"
+args = ["clean", "--config", "Dev.toml", "--verbose"]
+
+[tasks.serve-dist]
+command = "trunk"
+args = ["serve", "--config", "Dev.toml", "--verbose"]
+
+[tasks.clean-release]
+command = "trunk"
+args = ["clean", "--config", "Release.toml", "--verbose"]
+
+[tasks.build-release]
+command = "trunk"
+args = ["build", "--config", "Release.toml", "--verbose"]
+
+[tasks.run-dev]
+run_task = { name = ["clean-css", "clean-dist", "serve-dist"] }
+
+[tasks.run-release]
+run_task = { name = ["clean-css", "clean-release", "build-release"] }
