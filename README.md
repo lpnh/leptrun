@@ -6,7 +6,7 @@ My personal CSR Web App template using Leptos, Trunk and TailwindCSS
 
 ### Compiling to WebAssembly
 
-To be able to compile the code for WebAssembly:
+To be able to compile the code for WebAssembly, run:
 
 ```no_rust
 rustup target add wasm32-unknown-unknown
@@ -22,9 +22,7 @@ cargo install trunk
 
 ### Tailwind (standalone CLI)
 
-Get the [latest release](https://github.com/tailwindlabs/tailwindcss/releases/latest) and give it executable permissions.
-
-Example for Linux:
+Get the [latest release](https://github.com/tailwindlabs/tailwindcss/releases/latest) and give it executable permissions:
 
 ```no_rust
 curl -LO https://github.com/tailwindlabs/tailwindcss/releases/latest/download/tailwindcss-linux-x64
@@ -46,6 +44,30 @@ Install `cargo-make`:
 
 ```no_rust
 sudo pacman -S cargo-make
+```
+
+## VS Code
+
+Add the following to `settings.json` file:
+
+```json
+  "emmet.includeLanguages": {
+    "rust": "html",
+    "*.rs": "html"
+  },
+  "tailwindCSS.includeLanguages": {
+      "rust": "html",
+      "*.rs": "html"
+  },
+  "files.associations": {
+      "*.rs": "rust"
+  },
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "on",
+    "strings": true
+  },
+  "css.validate": false,
 ```
 
 ## Run
