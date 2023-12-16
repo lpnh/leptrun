@@ -70,16 +70,22 @@ Add the following to `settings.json` file:
   "css.validate": false,
 ```
 
-## Run
+## Usage
 
-In development mode:
+### Development
 
 ```no_rust
 cargo make run-dev
 ```
 
-For release:
+### Release
 
 ```no_rust
 cargo make run-release
+```
+
+### Updating `gh-pages` branch
+
+```
+cargo make update-pages
 ```
