@@ -30,4 +30,4 @@ run_task = { name = ["clean-css", "clean-release", "build-release", "add-public"
 
 [tasks.update-pages]
 command = "git"
-args = ["subtree", "push", "--prefix", "./release", "origin", "gh-pages"]
+args = ["subtree", "push", "--prefix", "release", "origin", "gh-pages"]
