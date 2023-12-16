@@ -18,8 +18,16 @@ args = ["clean", "--config", "Release.toml"]
 command = "trunk"
 args = ["build", "--config", "Release.toml", "--public-url", "/leptrun/"]
 
+[tasks.add-public]
+command = "cp"
+args = ["./public/about_favicon.txt", "./release/about_favicon.txt"]
+
 [tasks.run-dev]
 run_task = { name = ["clean-css", "clean-dist", "serve-dist"] }
 
 [tasks.run-release]
 run_task = { name = ["clean-css", "clean-release", "build-release"] }
+
+[tasks.update-pages]
+command = "git"
+args = ["subtree", "push", "--prefix", "./release", "origin", "gh-pages"]
