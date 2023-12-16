@@ -17,14 +17,14 @@ pub fn App() -> impl IntoView {
 fn Home() -> impl IntoView {
     view! {
         <div class="pb-20 flex flex-1 items-center mx-4">
-            <div class="mx-auto max-w-3xl text-center">
+            <div class="mx-auto max-w-3xl text-center md:space-y-20 space-y-14">
                 <div>
                     <h1 class="pb-6 md:text-3xl text-xl text-red-400 font-bold">"Leptos + Trunk + Tailwind"</h1>
                     <p class="md:text-lg">"This is a CSR Web Application Template"</p>
                     <p class="md:text-lg">"Made with Leptos, Trunk and Tailwind"</p>
                 </div>
                 <div>
-                    <a href="https://github.com/lpnh/leptrun">"Check the Source code"</a>
+                    <a class="md:text-2xl text-lg text-pink-500 hover:text-pink-400 active:text-pink-400 transition duration-200" href="https://github.com/lpnh/leptrun">"Check the Source Code"</a>
                 </div>
             </div>
         </div>

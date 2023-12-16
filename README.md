@@ -1,6 +1,6 @@
 # leptrun 🦀
 
-My personal CSR Web App template using Leptos, Trunk and TailwindCSS
+My personal CSR Web App template leveraging Leptos, Trunk, and TailwindCSS
 
 ## Setup
 
