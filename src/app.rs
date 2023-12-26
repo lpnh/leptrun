@@ -19,12 +19,23 @@ fn Home() -> impl IntoView {
         <div class="pb-20 flex flex-1 items-center mx-4">
             <div class="mx-auto max-w-3xl text-center md:space-y-20 space-y-14">
                 <div>
-                    <h1 class="pb-6 md:text-3xl text-xl text-red-400 font-bold">"Leptos + Trunk + Tailwind"</h1>
-                    <p class="md:text-lg">"This is a CSR Web Application Template"</p>
-                    <p class="md:text-lg">"Made with Leptos, Trunk and Tailwind"</p>
+                    <h1 class="pb-6 md:text-2xl text-lg text-rose-400 font-bold">"A Website Written in Rust"</h1>
+                    <p class="m-auto w-3/4 md:text-xl">
+                        "This is a personal CSR Website Template made with "
+                        <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                        href="https://leptos.dev/">"Leptos"
+                        </a>
+                        ", "
+                        <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                        href="https://trunkrs.dev/">"Trunk"</a> 
+                        " and "
+                        <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                            href="https://tailwindcss.com/">"Tailwind"</a>
+                    </p>
                 </div>
-                <div>
-                    <a class="md:text-2xl text-lg text-pink-500 hover:text-pink-400 active:text-pink-400 transition duration-200" href="https://github.com/lpnh/leptrun">"Check the Source Code"</a>
+                <div class="md:text-base text-sm">
+                    <p>"You can check the source code "
+                    <a class="border-b border-b-rose-300 text-rose-300 hover:text-rose-200 hover:border-b-rose-200 active:text-rose-200 active:border-b-rose-200 transition duration-200" href="https://github.com/lpnh/leptrun">"here"</a></p>
                 </div>
             </div>
         </div>
@@ -34,7 +45,7 @@ fn Home() -> impl IntoView {
 #[component]
 fn Header() -> impl IntoView {
     view! {
-        <div class="tracking-widest mt-4 flex sm:text-lg text-orange-300 justify-center items-center inset-x-0 top-0 bottom-auto">"Hello, friend!"</div>
+        <div class="tracking-widest mt-4 flex sm:text-lg text-amber-200 justify-center items-center inset-x-0 top-0 bottom-auto">"Hello, friend!"</div>
     }
 }
 

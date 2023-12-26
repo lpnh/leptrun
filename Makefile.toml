@@ -19,8 +19,8 @@ command = "trunk"
 args = ["build", "--config", "Release.toml", "--public-url", "/leptrun/"]
 
 [tasks.add-public-files]
-command = "cp"
-args = ["./public/about_favicon.txt", "./release/about_favicon.txt"]
+command = "sh"
+args = ["-c", "cp -r public/aux/* release/"]
 
 [tasks.run-dev]
 run_task = { name = ["clean-css", "clean-dist", "serve-dist"] }

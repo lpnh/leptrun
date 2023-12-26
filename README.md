@@ -1,6 +1,6 @@
-# leptrun 🦀
+# 🦀 leptrun
 
-My personal CSR Web App template leveraging [Leptos](https://github.com/leptos-rs/leptos), [Trunk](https://github.com/trunk-rs/trunk) and [Tailwind](https://github.com/tailwindlabs/tailwindcss).
+My personal CSR Website template leveraging [Leptos](https://github.com/leptos-rs/leptos), [Trunk](https://github.com/trunk-rs/trunk) and [Tailwind](https://github.com/tailwindlabs/tailwindcss).
 
 ## Setup
 
@@ -30,6 +30,20 @@ chmod +x tailwindcss-linux-x64
 mv tailwindcss-linux-x64 tailwindcss
 ```
 
+The config file can be generated running:
+
+```no_rust
+./tailwindcss init
+```
+
+And make sure to include the rust files, like this:
+
+```js
+  content: { 
+    files: ["*.html", "./src/**/*.rs"],
+  },
+```
+
 ### Assets
 
 Create new `public` directory for storing `favicon.ico`
@@ -37,6 +51,10 @@ Create new `public` directory for storing `favicon.ico`
 ```no_rust
 mkdir public
 ```
+
+*Note: to store any additional public files, besides the ones
+included in the `index.html` head,
+you can use the `public/aux` directory.*
 
 ### Makefile
 
@@ -46,7 +64,7 @@ Install `cargo-make`:
 sudo pacman -S cargo-make
 ```
 
-## VS Code
+### VS Code
 
 Add the following to `settings.json` file:
 
@@ -72,19 +90,21 @@ Add the following to `settings.json` file:
 
 ## Usage
 
-### Development
+Simply leverage the commands available in the `Makefile.toml`.
+
+**Development**
 
 ```no_rust
 cargo make run-dev
 ```
 
-### Release
+**Release**
 
 ```no_rust
 cargo make run-release
 ```
 
-### Updating `gh-pages` branch
+**Updating `gh-pages` branch**
 
 ```
 cargo make update-pages
