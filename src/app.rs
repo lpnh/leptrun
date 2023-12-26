@@ -23,19 +23,21 @@ fn Home() -> impl IntoView {
                     <p class="m-auto w-3/4 md:text-xl">
                         "This is a personal CSR Website Template made with "
                         <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
-                        href="https://leptos.dev/">"Leptos"
+                        href="https://leptos.dev/" target="_blank">"Leptos"
                         </a>
                         ", "
                         <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
-                        href="https://trunkrs.dev/">"Trunk"</a> 
+                        href="https://trunkrs.dev/" target="_blank">"Trunk"</a> 
                         " and "
                         <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
-                            href="https://tailwindcss.com/">"Tailwind"</a>
+                            href="https://tailwindcss.com/" target="_blank">"Tailwind"</a>
                     </p>
                 </div>
                 <div class="md:text-base text-sm">
                     <p>"You can check the source code "
-                    <a class="border-b border-b-rose-300 text-rose-300 hover:text-rose-200 hover:border-b-rose-200 active:text-rose-200 active:border-b-rose-200 transition duration-200" href="https://github.com/lpnh/leptrun">"here"</a></p>
+                        <a class="border-b border-b-rose-300 text-rose-300 hover:text-rose-200 hover:border-b-rose-200 active:text-rose-200 active:border-b-rose-200 transition duration-200"
+                            href="https://github.com/lpnh/leptrun" target="_blank">"here"</a>
+                    </p>
                 </div>
             </div>
         </div>
