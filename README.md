@@ -88,9 +88,34 @@ Add the following to `settings.json` file:
   "css.validate": false,
 ```
 
+## Project Name
+
+Make sure to update all files to match the new project name. This includes:
+
+**`Cargo.toml` package name**
+
+```toml
+[package]
+name = "leptrun"
+```
+
+**`Makefile.toml` build-release task**
+
+```toml
+[tasks.build-release]
+command = "trunk"
+args = ["build", "--config", "Release.toml", "--public-url", "/leptrun/"]
+```
+
+**`index.html` title element**
+
+```html
+<title>leptrun</title>
+```
+
 ## Usage
 
-Simply leverage the commands available in the `Makefile.toml`.
+Simply leverage the tasks available in the `Makefile.toml`.
 
 **Development**
 
