@@ -5,7 +5,7 @@ pub fn App() -> impl IntoView {
     view! {
         <div class="font-fira-mono flex flex-col bg-stone-950 min-h-screen text-base text-center text-gray-300">
             <div class="flex flex-1 flex-col items-center">
-                <Header/>               
+                <Header/>
                 <Home/>
                 <Footer/>
             </div>
@@ -27,7 +27,7 @@ fn Home() -> impl IntoView {
                         </a>
                         ", "
                         <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
-                        href="https://trunkrs.dev/" target="_blank">"Trunk"</a> 
+                        href="https://trunkrs.dev/" target="_blank">"Trunk"</a>
                         " and "
                         <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
                             href="https://tailwindcss.com/" target="_blank">"Tailwind"</a>
@@ -55,7 +55,8 @@ fn Header() -> impl IntoView {
 fn Footer() -> impl IntoView {
     view! {
         <div class="pb-0 m-auto left-0 right-0">
-            <div class="text-xs">"© 2023 lpnh"</div>
+            <div class="text-xs">"© 2024 lpnh"</div>
         </div>
     }
 }
+
