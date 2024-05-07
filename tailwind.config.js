@@ -1,14 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: { 
-        files: ["*.html", "./src/**/*.rs"],
+  content: ["*.html", "./src/**/*.rs"],
+  theme: {
+    extend: {},
+    fontFamily: {
+      'fira-mono': ['"Fira Mono"', 'monospace'],
     },
-    theme: {
-        extend: {},
-        fontFamily: {
-            'fira-mono': ['"Fira Mono"', 'monospace'],
-        },
-    },
-    plugins: [],
+  },
+  plugins: [],
 }
 
