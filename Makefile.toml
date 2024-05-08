@@ -14,7 +14,15 @@ args = ["serve", "--open"]
 [tasks.run-release]
 dependencies = ["clean-release"]
 command = "trunk"
-args = ["build", "--release", "--dist", "release", "--public-url", "/leptrun/"]
+args = [
+    "build",
+    "--release",
+    "--minify",
+    "--dist",
+    "release",
+    "--public-url",
+    "/leptrun/",
+]
 
 [tasks.update-pages]
 command = "git"
