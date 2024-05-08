@@ -1,37 +1,20 @@
-[tasks.clean-css]
-command = "rm"
-args = ["-f", "style/output.css"]
-
 [tasks.clean-dist]
-dependencies = ["clean-css"]
 command = "trunk"
 args = ["clean", "--cargo"]
 
 [tasks.clean-release]
-dependencies = ["clean-css"]
 command = "trunk"
 args = ["clean", "--cargo", "--dist", "release"]
 
-[tasks.run-tailwind]
-command = "./tailwindcss"
-args = ["-i", "input.css", "-o", "style/output.css", "--minify"]
-
 [tasks.run-dev]
-dependencies = ["clean-dist", "run-tailwind"]
+dependencies = ["clean-dist"]
 command = "trunk"
-args = ["serve"]
-
-[tasks.build-release]
-dependencies = ["clean-release", "run-tailwind"]
-command = "trunk"
-args = ["build", "--release", "--dist", "release", "--public-url", "/leptrun/"]
-
-[tasks.add-public-files]
-command = "sh"
-args = ["-c", "cp -r public/aux/* release/"]
+args = ["serve", "--open"]
 
 [tasks.run-release]
-run_task = { name = ["build-release", "add-public-files"] }
+dependencies = ["clean-release"]
+command = "trunk"
+args = ["build", "--release", "--dist", "release", "--public-url", "/leptrun/"]
 
 [tasks.update-pages]
 command = "git"
