@@ -60,6 +60,8 @@ on cargo-make repo*
 
 ## Usage
 
+### Running it
+
 Simply leverage the tasks available in the `Makefile.toml`.
 
 **Development**
@@ -80,16 +82,18 @@ cargo make run-release
 cargo make update-pages
 ```
 
-Make sure to update all files to match your project name.
+### Renaming it
 
-[the package name](Cargo.toml)
+Make sure to update the following files to match your project name.
+
+`Cargo.toml`
 
 ```toml
 [package]
 name = "leptrun"
 ```
 
-[the url](Makefile.toml)
+`Makefile.toml`
 
 ```toml
 [tasks.build-release]
@@ -97,7 +101,7 @@ command = "trunk"
 args = ["build", "--config", "Release.toml", "--public-url", "/leptrun/"]
 ```
 
-[the title](index.html)
+`index.html`
 
 ```html
 <title>leptrun</title>
@@ -135,7 +139,7 @@ Add the `@tailwind` directives to the `input.css`:
 @tailwind utilities;
 ```
 
-Including the `Fira Mono` font to both:
+Including the `Fira Mono` font:
 
 ```js
 /** @type {import('tailwindcss').Config} */
