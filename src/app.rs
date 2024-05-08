@@ -3,11 +3,11 @@ use leptos::*;
 #[component]
 pub fn App() -> impl IntoView {
     view! {
-        <div class="font-fira-mono flex flex-col bg-stone-950 min-h-screen text-base text-center text-gray-300">
+        <div class="flex min-h-screen flex-col bg-stone-950 text-center font-fira-mono text-base text-gray-300">
             <div class="flex flex-1 flex-col items-center">
-                <Header/>
-                <Home/>
-                <Footer/>
+                <Header />
+                <Home />
+                <Footer />
             </div>
         </div>
     }
@@ -16,26 +16,26 @@ pub fn App() -> impl IntoView {
 #[component]
 fn Home() -> impl IntoView {
     view! {
-        <div class="pb-20 flex flex-1 items-center mx-4">
-            <div class="mx-auto max-w-3xl text-center md:space-y-20 space-y-14">
+        <div class="mx-4 flex flex-1 items-center pb-20">
+            <div class="mx-auto max-w-3xl space-y-14 text-center md:space-y-20">
                 <div>
-                    <h1 class="pb-6 md:text-2xl text-lg text-rose-400 font-bold">"A Website Written in Rust"</h1>
+                    <h1 class="pb-6 text-lg font-bold text-rose-400 md:text-2xl">"Rust on the Client Side?!"</h1>
                     <p class="m-auto w-3/4 md:text-xl">
-                        "This is a personal CSR Website Template made with "
-                        <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
-                        href="https://leptos.dev/" target="_blank">"Leptos"
+                        "This is a client-side rendering website template made with "
+                        <a class="text-rose-300 transition duration-200 hover:text-rose-200 active:text-rose-200"
+                            href="https://leptos.dev/" target="_blank">"Leptos"
                         </a>
                         ", "
-                        <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
-                        href="https://trunkrs.dev/" target="_blank">"Trunk"</a>
+                        <a class="text-rose-300 transition duration-200 hover:text-rose-200 active:text-rose-200"
+                            href="https://trunkrs.dev/" target="_blank">"Trunk"</a>
                         " and "
-                        <a class="text-rose-300 hover:text-rose-200 active:text-rose-200 transition duration-200"
+                        <a class="text-rose-300 transition duration-200 hover:text-rose-200 active:text-rose-200"
                             href="https://tailwindcss.com/" target="_blank">"Tailwind"</a>
                     </p>
                 </div>
-                <div class="md:text-base text-sm">
+                <div class="text-sm md:text-base">
                     <p>"You can check the source code "
-                        <a class="border-b border-b-rose-300 text-rose-300 hover:text-rose-200 hover:border-b-rose-200 active:text-rose-200 active:border-b-rose-200 transition duration-200"
+                        <a class="border-b border-b-rose-300 text-rose-300 transition duration-200 hover:border-b-rose-200 hover:text-rose-200 active:border-b-rose-200 active:text-rose-200"
                             href="https://github.com/lpnh/leptrun" target="_blank">"here"</a>
                     </p>
                 </div>
@@ -47,16 +47,18 @@ fn Home() -> impl IntoView {
 #[component]
 fn Header() -> impl IntoView {
     view! {
-        <div class="tracking-widest mt-4 flex sm:text-lg text-amber-200 justify-center items-center inset-x-0 top-0 bottom-auto">"Hello, friend!"</div>
+        <div
+            class="inset-x-0 bottom-auto top-0 mt-4 flex items-center justify-center tracking-widest text-amber-200 sm:text-lg">
+            "Hello, friend!"
+        </div>
     }
 }
 
 #[component]
 fn Footer() -> impl IntoView {
     view! {
-        <div class="pb-0 m-auto left-0 right-0">
-            <div class="text-xs">"© 2024 lpnh"</div>
+        <div class="left-0 right-0 m-auto pb-0 text-xs">
+            "CC0 Ferris the crab"
         </div>
     }
 }
-
