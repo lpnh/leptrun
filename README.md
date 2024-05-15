@@ -3,7 +3,7 @@
 A CSR website template leveraging
 [Leptos](https://github.com/leptos-rs/leptos),
 [Trunk](https://github.com/trunk-rs/trunk) and
-[Tailwind](https://github.com/tailwindlabs/tailwindcss).
+[Tailwind](https://github.com/tailwindlabs/tailwindcss)
 
 ## Setup
 
@@ -11,32 +11,32 @@ A CSR website template leveraging
 
 Install the Wasm target:
 
-```
+```sh
 rustup target add wasm32-unknown-unknown
 ```
 
 To check the installed targets:
 
-```
+```sh
 rustup target list --installed
 ```
 
 ### Trunk
 
-Install Trunk using cargo:
+Install Trunk:
 
-```
+```sh
 cargo install trunk --locked
 ```
 
 *For additional installation options, refer to the [install
 section](https://trunkrs.dev/#install) on Trunk's website*
 
-### Task Runner
+### Cargo-make
 
 Install cargo-make:
 
-```
+```sh
 cargo install --force cargo-make
 ```
 
@@ -52,19 +52,19 @@ Simply leverage the tasks available in the `Makefile.toml`.
 
 **Development**
 
-```no_rust
+```sh
 cargo make run-dev
 ```
 
 **Release**
 
-```no_rust
+```sh
 cargo make run-release
 ```
 
 **Updating `gh-pages` branch**
 
-```
+```sh
 cargo make update-pages
 ```
 
