@@ -1,0 +1,29 @@
+[tasks.clean-dist]
+command = "trunk"
+args = ["clean", "--cargo"]
+
+[tasks.clean-release]
+command = "trunk"
+args = ["clean", "--cargo", "--dist", "release"]
+
+[tasks.run-dev]
+dependencies = ["clean-dist"]
+command = "trunk"
+args = ["serve", "--open"]
+
+[tasks.run-release]
+dependencies = ["clean-release"]
+command = "trunk"
+args = [
+    "build",
+    "--release",
+    "--minify",
+    "--dist",
+    "release",
+    "--public-url",
+    "/{{project-name}}/",
+]
+
+[tasks.update-pages]
+command = "git"
+args = ["subtree", "push", "--prefix", "release", "origin", "gh-pages"]

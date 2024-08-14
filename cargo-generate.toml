@@ -1,0 +1,6 @@
+[template]
+ignore = ["release", "Cargo.lock"]
+include = ["*.template"]
+
+[hooks]
+post = ["post-generate.rhai"]

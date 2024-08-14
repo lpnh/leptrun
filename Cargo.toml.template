@@ -1,8 +1,8 @@
 [package]
-name = "leptrun"
+name = "{{project-name}}"
+authors = ["{{authors}}"]
 version = "0.1.0"
 edition = "2021"
-publish = false
 
 [dependencies]
 leptos = { version = "0.6.15", features = ["csr"] }
