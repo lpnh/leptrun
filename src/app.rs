@@ -7,7 +7,6 @@ pub fn App() -> impl IntoView {
             <div class="flex flex-1 flex-col items-center">
                 <Header />
                 <Home />
-                <Footer />
             </div>
         </div>
     }
@@ -50,15 +49,6 @@ fn Header() -> impl IntoView {
         <div
             class="inset-x-0 bottom-auto top-0 mt-4 flex items-center justify-center tracking-widest text-amber-200 sm:text-lg">
             "Hello, friend!"
-        </div>
-    }
-}
-
-#[component]
-fn Footer() -> impl IntoView {
-    view! {
-        <div class="left-0 right-0 m-auto pb-0 text-xs">
-            "CC0 Ferris the crab"
         </div>
     }
 }

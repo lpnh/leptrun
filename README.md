@@ -5,6 +5,16 @@ A CSR website template leveraging
 [Trunk](https://github.com/trunk-rs/trunk) and
 [Tailwind](https://github.com/tailwindlabs/tailwindcss)
 
+## Generating the Template
+
+This template can be generated using `cargo-generate`:
+
+```
+cargo generate git@github.com:lpnh/leptrun.git
+```
+
+*For additional information, check its [documentation](https://cargo-generate.github.io/cargo-generate/index.html)*
+
 ## Setup
 
 ### Compiling to WebAssembly
@@ -46,9 +56,7 @@ on cargo-make repo*
 
 ## Usage
 
-### Running it
-
-Simply leverage the tasks available in the `Makefile.toml`.
+Feel free to leverage the tasks available in the `Makefile.toml`.
 
 **Development**
 
@@ -66,29 +74,4 @@ cargo make run-release
 
 ```sh
 cargo make update-pages
-```
-
-### Renaming it
-
-Make sure to update the following files to match your project name.
-
-`Cargo.toml`
-
-```toml
-[package]
-name = "leptrun"
-```
-
-`Makefile.toml`
-
-```toml
-[tasks.build-release]
-command = "trunk"
-args = ["build", "--config", "Release.toml", "--public-url", "/leptrun/"]
-```
-
-`index.html`
-
-```html
-<title>leptrun</title>
 ```
