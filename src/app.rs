@@ -1,7 +1,10 @@
-use leptos::*;
+use leptos::prelude::*;
+use leptos_meta::*;
 
 #[component]
 pub fn App() -> impl IntoView {
+    provide_meta_context();
+
     view! {
         <div class="flex min-h-screen flex-col bg-stone-950 text-center font-fira-mono text-base text-gray-300">
             <div class="flex flex-1 flex-col items-center">
