@@ -2,16 +2,16 @@
 name = "{{project-name}}"
 authors = ["{{authors}}"]
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
-leptos = { version = "0.6.15", features = ["csr"] }
-leptos_meta = { version = "0.6.15", features = ["csr"] }
-leptos_router = { version = "0.6.15", features = ["csr"] }
-log = "0.4.22"
+leptos = { version = "0.8.2", features = ["csr"] }
+leptos_meta = "0.8.2"
+leptos_router = "0.8.2"
+log = "0.4.27"
 gloo-net = { version = "0.6.0", features = ["http"] }
 
 # dependencies for client (enable when csr or hydrate set)
-wasm-bindgen = { version = "0.2.93" }
+wasm-bindgen = { version = "0.2.100" }
 console_log = { version = "1.0.0" }
 console_error_panic_hook = { version = "0.1.7" }
